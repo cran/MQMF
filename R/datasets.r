@@ -9,7 +9,7 @@
 #'     model. Workable initial parameter values, before log-transformation 
 #'     might be: r= 0.4, K=9400, Binit=3400, sigma=0.05 for the 
 #'     Schaefer version, while these also work for the Fox model 
-#'     one could use r=0.3, K=12000, Binit=4000, sigma=0.05.
+#'     one could more efficiently use r=0.3, K=12000, Binit=4000, sigma=0.05.
 #'
 #' @name abdat
 #' 
@@ -71,12 +71,14 @@ NULL
 #' @section Subjects:
 #'  \itemize{
 #'   \item Tagging data
-#'   \item Growth of individuals estimation
+#'   \item Estimation of individual growth
 #'   \item Binomial likelihoods
+#'   \item Faben's version of the von Bertalanffy curve
 #'  }
 #'  
-#' @source Thanks to Dr Craig Mundy and the abalone team at the Institute of Marine and Antarctic Studies, of 
-#'     the University of Tasmania for the use of this data.
+#' @source Thanks to Dr Craig Mundy and the abalone team at the Institute of 
+#'     Marine and Antarctic Studies, of the University of Tasmania for the use 
+#'     of this data.
 #'     
 #' @examples
 #'  data(blackisland)
@@ -93,11 +95,11 @@ NULL
 #'
 #' @description A data.frame containing 31 years of catch, standardized
 #'     cpue, number of records, and the unstandardized geometric mean
-#'     cpue. The fisheries data can is used in the surplus production
-#'     modelling. Initial parameter estimates very close to the 
-#'     optimum values could be param <- log(c(r=0.25, K=5500, Binit=3000,
-#'     sigma=0.2)) for the Schaefer model and log(c(r=0.15, K=6500,
-#'     Binit=3000, sigma=0.2)) for the Fox model
+#'     cpue for Pink Ling (\emph{Genypterus blacodes}). The fisheries data can 
+#'     be used in the surplus production modelling in Chapter 7. Initial 
+#'     parameter estimates very close to the optimum values could be 
+#'     param <- log(c(r=0.25, K=5500, Binit=3000,sigma=0.2)) for the Schaefer 
+#'     model and log(c(r=0.15, K=6500, Binit=3000, sigma=0.2)) for the Fox model
 #'     
 #' @name dataspm
 #' 
@@ -109,7 +111,8 @@ NULL
 #'   \item{catch}{the catch in tonnes to the nearest 100kg}
 #'   \item{cpue}{the standardized cpue scaled to the mean of the series}
 #'   \item{records}{the number of records making up the yearly totals}
-#'   \item{geom}{the naive geometric mean cpue of the raw data as kg/hr, also rescaled to the mean of the series}
+#'   \item{geom}{the naive geometric mean cpue of the raw data as kg/hr, also 
+#'               rescaled to the mean of the series}
 #' }
 #' 
 #' @section Subjects:
@@ -121,9 +124,9 @@ NULL
 #' 
 #' @source Haddon, M. and M. Sporcic (2017) Catch rate standardizations for 
 #'     selected SESSF Species (data to 2016) pp 43-406 in Tuck, G.N. 
-#'     (\emph{ed}) \emph{Stock Assessment for the Southern and Eastern scalefish and shark
-#'     fishery 2016 and 2017.} 837 pp. ISBN 978-1-4863-1012-8 data extracted 
-#'     from Table 7.96 PinkLing4050 page 216.
+#'     (\emph{ed}) \emph{Stock Assessment for the Southern and Eastern scalefish 
+#'     and shark fishery 2016 and 2017.} 837 pp. ISBN 978-1-4863-1012-8 data 
+#'     extracted from Table 7.96 PinkLing4050 page 216.
 #' 
 #' @examples 
 #'  data(dataspm)
@@ -203,13 +206,13 @@ NULL
 #' @format A data.frame of mean length-at-time data
 #' \describe{
 #'   \item{week}{the week of sampling minnows for lengths}
-#'   \item{length}{the mean length in the corresponding week in mm}
+#'   \item{length}{the estimated mean length in the corresponding week in mm}
 #' }
 #' 
 #' @section Subjects:
 #'  \itemize{
 #'    \item seasonal growth curves
-#'    \item von Bertanlanffy
+#'    \item von Bertalanffy
 #'    \item Model residuals
 #'  }
 #'  
@@ -231,7 +234,7 @@ NULL
 #'     Somers, 1994. It contains the catches, in tonnes, 
 #'     of banana prawns (\emph{Penaeus merguiensis} and \emph{P. indicus}), 
 #'     tiger prawns (brown - \emph{P. esculentus}) and (grooved - \emph{P. 
-#'     semisulcatus}), endeavour prawns, (\emph{Metapenaeus endevaouri} and 
+#'     semisulcatus}), endeavour prawns, (\emph{Metapenaeus endeavouri} and 
 #'     \emph{M. ensis}), king prawns (\emph{P. latisulcatus} and 
 #'     \emph{P. longistylus}), the number of vessels fishing, and 
 #'     the annual effort as boat-days.
@@ -247,7 +250,7 @@ NULL
 #'   \item{tiger}{tiger prawn catches, tonnes.}
 #'   \item{endevaour}{endeavour prawn catches, tonnes.}
 #'   \item{king}{king prawn catches, tonnes.}
-#'   \item{boats}{the number of vessesl fishing in that year.}
+#'   \item{boats}{the number of vessels fishing in that year.}
 #'   \item{boatday}{the total annual effort as boatdays.}
 #' }
 #' 
@@ -285,7 +288,7 @@ NULL
 #'     catch divided by the total effort, a ratio estimate). Initial parameter 
 #'     estimates close to the optimum values for the Schaefer model could be
 #'     param <- log(c(r=0.28,K=2100000,Binit=2400000,sigma=0.16)). With this
-#'     longer time-series the eventuial MSY estimate was somewhat larger than 
+#'     longer time-series the eventual MSY estimate was somewhat larger than 
 #'     when just the schaef data are used.
 #'
 #' @name pttuna
@@ -294,7 +297,7 @@ NULL
 #' 
 #' @format A data.frame of fisheries data
 #' \describe{
-#'   \item{year}{the fishing year from 1934 - 1955}
+#'   \item{year}{the fishing year from 1934 - 1967}
 #'   \item{catch}{the total annual catch, '000s of pounds }
 #'   \item{effort}{the total effort as standard class 4 baitboat fishing days}
 #'   \item{cpue}{the catch '000 pounds per standard class 4 day, a ratio cpue}
@@ -307,7 +310,10 @@ NULL
 #'    \item Log-Normal likelihoods
 #'  }
 #'  
-#' @source from Table 6 page 457 in Pella, J.J. and P.K. Tomlinson (1969) A Generalized Stock Production Model. \emph{Bulletin, Inter-American Tropical Tuna Commission} 13(3): 421-458. Obtainable from \emph{https://www.iattc.org/BulletinsENG.htm}
+#' @source from Table 6 page 457 in Pella, J.J. and P.K. Tomlinson (1969) A 
+#'     Generalized Stock Production Model. \emph{Bulletin, Inter-American 
+#'     Tropical Tuna Commission} 13(3): 421-458. Obtainable from 
+#'     \emph{https://www.iattc.org/BulletinsENG.htm}
 #' 
 #' @examples
 #'  data(pttuna)
@@ -429,7 +435,7 @@ NULL
 #'  }
 #'  
 #' @source Extracted from Table 2, page 496 of Penn, J.W. and N. Caputi 
-#'     (1986) Spawning stock-recuitment relationships and environmental 
+#'     (1986) Spawning stock-recruitment relationships and environmental 
 #'     influences on the tiger prawn (\emph{Penaeus esculentus}) fishery 
 #'     in Exmouth Gulf, Western Australia. \emph{Australian Journal of 
 #'     Marine and Freshwater Research} 37: 491-505. Sorted on spawning index.
@@ -448,7 +454,9 @@ NULL
 #'     up of smoothed real catches but two simulated indices of relative
 #'     abundance. This data-set is designed to be used to illustrate
 #'     the implementation of surplus production models when there are
-#'     more than one time-series of relative abundance indices. The
+#'     more than one time-series of relative abundance indices. This is not
+#'     currently implemented in the book but is put here for use by readers
+#'     should they wish to pursue this approach. The
 #'     indices have been designed to generate a workable answer but also
 #'     require the use of a penalty on harvest rates to avoid massively 
 #'     inflated harvest rates well above 1. Instead of using simpspm,
@@ -467,7 +475,7 @@ NULL
 #' 
 #' @format A data.frame of fishery data 
 #' \describe{
-#'   \item{year}{the calander year of fishing}
+#'   \item{year}{the calender year of fishing}
 #'   \item{catch}{the reported catch in tonnes}
 #'   \item{cpue1}{the first index of relative abundance}
 #'   \item{cpue2}{the second index of relative abundance}

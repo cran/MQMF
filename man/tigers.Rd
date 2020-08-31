@@ -4,14 +4,16 @@
 \name{tigers}
 \alias{tigers}
 \title{tigers is tiger prawn recruitment data from Penn & Caputi 1986}
-\format{A data.frame of spawning recruitment data
+\format{
+A data.frame of spawning recruitment data
 \describe{
   \item{Spawn}{the estimated spawning biomass index in a year (Aug - Oct)}
   \item{Recruit}{estimated recruitment from the biomass in each year (Mar - May)}
-}}
+}
+}
 \source{
 Extracted from Table 2, page 496 of Penn, J.W. and N. Caputi 
-    (1986) Spawning stock-recuitment relationships and environmental 
+    (1986) Spawning stock-recruitment relationships and environmental 
     influences on the tiger prawn (\emph{Penaeus esculentus}) fishery 
     in Exmouth Gulf, Western Australia. \emph{Australian Journal of 
     Marine and Freshwater Research} 37: 491-505. Sorted on spawning index.

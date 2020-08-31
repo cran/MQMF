@@ -4,15 +4,20 @@
 \name{pttuna}
 \alias{pttuna}
 \title{pttuna is yellowfin tuna fishery data from Pella-Tomlinson 1969}
-\format{A data.frame of fisheries data
+\format{
+A data.frame of fisheries data
 \describe{
-  \item{year}{the fishing year from 1934 - 1955}
+  \item{year}{the fishing year from 1934 - 1967}
   \item{catch}{the total annual catch, '000s of pounds }
   \item{effort}{the total effort as standard class 4 baitboat fishing days}
   \item{cpue}{the catch '000 pounds per standard class 4 day, a ratio cpue}
-}}
+}
+}
 \source{
-from Table 6 page 457 in Pella, J.J. and P.K. Tomlinson (1969) A Generalized Stock Production Model. \emph{Bulletin, Inter-American Tropical Tuna Commission} 13(3): 421-458. Obtainable from \emph{https://www.iattc.org/BulletinsENG.htm}
+from Table 6 page 457 in Pella, J.J. and P.K. Tomlinson (1969) A 
+    Generalized Stock Production Model. \emph{Bulletin, Inter-American 
+    Tropical Tuna Commission} 13(3): 421-458. Obtainable from 
+    \emph{https://www.iattc.org/BulletinsENG.htm}
 }
 \description{
 pttuna is yellowfin tuna fishery data from Pella-Tomlinson's
@@ -25,7 +30,7 @@ pttuna is yellowfin tuna fishery data from Pella-Tomlinson's
     catch divided by the total effort, a ratio estimate). Initial parameter 
     estimates close to the optimum values for the Schaefer model could be
     param <- log(c(r=0.28,K=2100000,Binit=2400000,sigma=0.16)). With this
-    longer time-series the eventuial MSY estimate was somewhat larger than 
+    longer time-series the eventual MSY estimate was somewhat larger than 
     when just the schaef data are used.
 }
 \section{Subjects}{

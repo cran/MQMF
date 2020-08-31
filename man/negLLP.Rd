@@ -43,7 +43,7 @@ the sum of the negative log-likelihoods using a normal PDF
 }
 \description{
 negLLP calculates the negative log-likelihood for normally
-    distributed variables allowing for some parameters to reamin fiuxed. 
+    distributed variables allowing for some parameters to remain fixed. 
     It assumes the presence of a function 'funk' that will calculate 
     predicted values of a dependent variable from a vector of 
     independent values (logobs). By having a separate vector of 
@@ -87,4 +87,7 @@ negLLP calculates the negative log-likelihood for normally
    result[i,] <- c(bestest,bestmodP$minimum)  # store each result
  }
  result   #Now you can plot -veLL againt r values for the profile
+ # parset()
+ # plot(result[,"r"],result[,"-veLL"],type="l",lwd=2,panel.first=grid())
+ # points(result[,"r"],result[,"-veLL"],pch=16,cex=1.1)
 }

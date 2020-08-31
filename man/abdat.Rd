@@ -4,12 +4,14 @@
 \name{abdat}
 \alias{abdat}
 \title{abdat A list of fishery data for blacklip abalone}
-\format{A data.frame of three columns
+\format{
+A data.frame of three columns
 \describe{
   \item{year}{the annual year in which the catches occurred}
   \item{catch}{the reported landed catch in tonnes, to the nearest kilogram}
   \item{cpue}{the standardized catch-per-unit-effort for this dive fishery}
-}}
+}
+}
 \source{
 Catch data from Mundy, C. and J. McAllister (2019) Tasmanian abalone fishery assessment 2018, Institute for Marine and Antarctic Studies, University of Tasmania, 190p. ISBN: 978-1-925646-46-7. The cpue data is an unpublished early attempt at standardizing the cpue data with respect to month, block, and diver. Many more details are now included in such analyses.
 }
@@ -23,7 +25,7 @@ A dataset of fishery data for blacklip abalone
     model. Workable initial parameter values, before log-transformation 
     might be: r= 0.4, K=9400, Binit=3400, sigma=0.05 for the 
     Schaefer version, while these also work for the Fox model 
-    one could use r=0.3, K=12000, Binit=4000, sigma=0.05.
+    one could more efficiently use r=0.3, K=12000, Binit=4000, sigma=0.05.
 }
 \section{Subjects}{
 

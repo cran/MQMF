@@ -21,14 +21,14 @@ plot1(
 \item{x}{The single vector of x data}
 
 \item{y}{the single vector of y data. If more are required they can
-be added spearately after calling plot1.}
+be added separately after calling plot1.}
 
-\item{xlab}{the label fot the x-axis, defaults to empty}
+\item{xlab}{the label for the x-axis, defaults to empty}
 
-\item{ylab}{the label fot the y-axis, defaults to empty}
+\item{ylab}{the label for the y-axis, defaults to empty}
 
 \item{type}{the type of plot "l" is for line, the default, "p" is
-points. If you want both plot a line and add points afterwards.}
+points. If you want both, then plot a line and add points afterwards.}
 
 \item{usefont}{which font to use, defaults to 7 which is Times bold}
 
@@ -41,7 +41,7 @@ then this value is used rather than estimating from the input y}
 it will expect one outside the function. In this way plot1 can be
 used when plotting multiple graphs, perhaps as mfrow=c(2,2)}
 
-\item{...}{required to allow funk to access its other parameters 
+\item{...}{required to allow the plot to access other parameters 
 without having to explicitly declare them in plot1, these include
 col, default = black, pch, if the type = "p", lwd, etc.}
 }
@@ -64,5 +64,7 @@ plot1 provides a quick way to plot out a single xy
  x <- rnorm(20,mean=5,sd=1)
  oldpar <- plot1(x,x,xlab="x-values",ylab="yvalues")
  points(x,x,pch=16,cex=1.5)
+ y <- rnorm(20,mean=5,sd=1)
+ plot1(x,y,type="p",cex=1.2,panel.first=grid())
  par(oldpar)
 }

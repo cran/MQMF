@@ -1,20 +1,32 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from this README.Rmd. Please do not edit that file -->
 
 # MQMF
 
 An R package for the book *Using R for Modelling and Quantitative
-Methods in Fisheries* (2020). ISBN: 9780367469894 due to be published in
-June 2020.
+Methods in Fisheries* (2020). ISBN: 9780367469894 due to be made
+available/published in September 2020.
 
-To install this development version from [GitHub](https://github.com/)
-you can use:
+Hardback and softback versions are available from *www.routledge.com*,
+but is also available for pre-order from Amazon (best to use one’s local
+Amazon site). A gitbook version is under development and once completed
+will at least be available on gitpages. I will annouce here when it is
+ready.
+
+The release version of the **MQMF** package (commit 88bc002499), is
+available on CRAN, but to install this development version from
+[GitHub](https://github.com/) you can use:
 
 ``` r
 if (!require(devtools)){install.packages("devtools")} 
 
 devtools::install_github("https://github.com/haddonm/MQMF")
 ```
+
+The development version differs from having more details put into the
+help pages, plus various typos and obscure text fixed. No changes have
+been made to the code base yet, though various developments are now in
+mind to increase robustness and generality of a number of the functions.
 
 There are currently no vignettes, although the example code-chunks from
 the book are all available as the help pages of functions chapter2,
@@ -39,7 +51,7 @@ weaknesses. More advanced subjects such as age- and size-structured
 models are not included here as they are not really suited to brief
 treatments.
 
-The primary objective of thios book is that it be useful to workers in
+The primary objective of this book is that it be useful to workers in
 the field. Hopefully, this R package will assist with that objective.
 
 Malcolm Haddon

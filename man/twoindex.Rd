@@ -4,13 +4,15 @@
 \name{twoindex}
 \alias{twoindex}
 \title{twoindex has orange roughy catches with hypothetical cpue}
-\format{A data.frame of fishery data 
+\format{
+A data.frame of fishery data 
 \describe{
-  \item{year}{the calander year of fishing}
+  \item{year}{the calender year of fishing}
   \item{catch}{the reported catch in tonnes}
   \item{cpue1}{the first index of relative abundance}
   \item{cpue2}{the second index of relative abundance}
-}}
+}
+}
 \source{
 Catches extracted from Table 4, page 11 of Haddon, M. (2017) 
    Orange Roughy East (Hoplostethus atlanticus) stock assessment
@@ -24,7 +26,9 @@ twoindex is a 35 x 4 data.frame of fishery data made
     up of smoothed real catches but two simulated indices of relative
     abundance. This data-set is designed to be used to illustrate
     the implementation of surplus production models when there are
-    more than one time-series of relative abundance indices. The
+    more than one time-series of relative abundance indices. This is not
+    currently implemented in the book but is put here for use by readers
+    should they wish to pursue this approach. The
     indices have been designed to generate a workable answer but also
     require the use of a penalty on harvest rates to avoid massively 
     inflated harvest rates well above 1. Instead of using simpspm,

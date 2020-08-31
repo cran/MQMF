@@ -20,7 +20,7 @@ from the independent values passed using the ellipsis.}
 will predict to compare with each of the input observed values.}
 
 \item{...}{required to allow funk to access its other input data
-without having to explicitly declare them in negNLL}
+without having to explicitly define them in negNLL}
 }
 \value{
 the sum of the negative log-likelihoods using a normal PDF
@@ -31,7 +31,7 @@ negNLL - Calculates the negative log-likelihood for
     as an argument, that will calculate predicted values of a 
     variable from a vector of input values. In the example below the
     predicted values are lengths-at-age and the input data are ages.
-    Only the arguments used within negNLL are listetd explicitly, 
+    Only the arguments used within negNLL are listed explicitly, 
     which leaves the data required to drive the funk to generate the
     predicted values for comparison with the observed to be passed 
     using the ..., so take care with spelling of the variable name
