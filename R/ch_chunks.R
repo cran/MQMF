@@ -7,7 +7,10 @@
 #'     as a repository for the various example code chunks found in 
 #'     chapter2. There are 15 r-code chunks in chapter2.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE
+#'     
 #' @name chapter2
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -31,8 +34,8 @@
 #' 
 #' # R-chunk 2 Page 19
 #'  #A more complex function prepares to plot a single base graphic
-#'  #It has the syntax for opening a window outside of Rstudio and
-#'  #defining a base graphic. It includes oldpar<-par(no.readonly=TRUE)
+#'  #It has syntax for opening a window outside of Rstudio and
+#'  #defining a base graphic. It includes oldpar <- par(no.readonly=TRUE)
 #'  #which is returned invisibly so that the original 'par' settings
 #'  #can be recovered using par(oldpar) after completion of your plot.
 #' 
@@ -54,7 +57,7 @@
 #' # R-chunk 3 pages 20 - 21
 #' #Examine the use of random seeds.
 #' 
-#' seed <- getseed()  # you will very likely get different naswers
+#' seed <- getseed()  # you will very likely get different answers
 #' set.seed(seed)
 #' round(rnorm(5),5)
 #' set.seed(123456)
@@ -65,11 +68,11 @@
 #' ### Plotting in R
 #' # R-chunk 4  page 22
 #' #library(MQMF)   # The development of a simple graph  see Fig. 2.1
-#' #The statements below open the RStudio graphics window, but opening
-#' #a separate graphics window using plotprep is sometimes clearer.
+#' # The statements below open the RStudio graphics window, but opening
+#' # a separate graphics window using plotprep is sometimes clearer.
 #' 
 #' data("LatA")  #LatA = length at age data; try properties(LatA)
-#' #plotprep(width=6.0,height=5.0,newdev=FALSE) #unhash for external plot
+#' # plotprep(width=6.0,height=5.0,newdev=FALSE) #unhash for external plot
 #' oldpar <- par(no.readonly=TRUE)  # not in the book's example
 #' setpalette("R4") #a more balanced, default palette see its help
 #' par(mfrow=c(2,2),mai=c(0.45,0.45,0.1,0.05))  # see ?parsyn
@@ -214,7 +217,20 @@
 #' 
 #' plotspmdat(schaef) # examine the code as an eg of a custom plot
 #' }
-NULL
+chapter2 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 2: A Non-Introduction to R \n\n")
+    cat("Contains 15 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter2 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter2
 
 
 # chapter3 --------
@@ -225,7 +241,10 @@ NULL
 #'     as a repository for the various example code chunks found in 
 #'     chapter3. There are 27 r-code chunks in chapter3.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE     
+#'     
 #' @name chapter3
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -587,7 +606,21 @@ NULL
 #' kable(yield,digits=c(2,3,3,3))    
 #' 
 #' }
-NULL
+chapter3 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 3: Simple Population Models \n\n")
+    cat("Contains 27 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter3 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter3
+
 
 
 # chapter4 --------
@@ -598,7 +631,10 @@ NULL
 #'     as a repository for the various example code chunks found in 
 #'     chapter4. There are 47 r-code chunks in chapter3.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE
+#'     
 #' @name chapter4
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -1273,7 +1309,21 @@ NULL
 #' mtext("Cumulative Probability",side=2,outer=TRUE,cex=0.9,font=7)
 #' par(oldp)  # return par to old settings; this line not in book      
 #' }
-NULL
+chapter4 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 4: Model Parameter Estimation \n\n")
+    cat("Contains 47 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter4 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter4
+
 
 
 # chapter5 --------
@@ -1286,7 +1336,10 @@ NULL
 #'     of course, feel free to use and modify any of these example 
 #'     chunks in your own work.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE
+#'     
 #' @name chapter5
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -1692,7 +1745,21 @@ NULL
 #' lines(L,domed(p2,L),lwd=2,col=4,lty=4)  
 #' par(oldp)  # return par to old settings; this line not in book     
 #' }
-NULL
+chapter5 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 5: Static Models \n\n")
+    cat("Contains 23 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter5 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter5
+
 
 # chapter6 --------
 
@@ -1704,7 +1771,10 @@ NULL
 #'     of course, feel free to use and modify any of these example 
 #'     chunks in your own work.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE
+#'     
 #' @name chapter6
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -2525,7 +2595,21 @@ NULL
 #' cat("95% 2 ",round((tmp2[5,] - tmp2[1,]),4),"\n")     
 #' cat("Diff  ",round((tmp2[6,] - tmp1[6,]),4),"\n")      
 #' }
-NULL
+chapter6 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 6: Static Models \n\n")
+    cat("Contains 53 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter6 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter6
+
 
 # chapter7 --------
 
@@ -2537,7 +2621,10 @@ NULL
 #'     of course, feel free to use and modify any of these example 
 #'     chunks in your own work.
 #'     
+#' @param verbose Should instructions to written to the console, default=TRUE
+#'     
 #' @name chapter7
+#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -2808,7 +2895,7 @@ NULL
 #' str(boots,max.level=1)     
 #'  
 #' # R-chunk 26  Page 285
-#'  #Summarize bootstrapped parameter estimates as quantiles  Table 7.6    
+#'  #Summarize bootstrapped parameter estimates as quantiles  seen in Table 7.5    
 #'  
 #' bootpar <- boots$bootpar     
 #' rows <- colnames(bootpar)     
@@ -2819,7 +2906,9 @@ NULL
 #'    tmp <- bootpar[,i]     
 #'    qtil <- quantile(tmp,probs=c(0.025,0.05,0.5,0.95,0.975),na.rm=TRUE)     
 #'    bootCI[i,] <- c(qtil,mean(tmp,na.rm=TRUE))     
-#' }     
+#' } 
+#' 
+#' # R-chunk 27 page 285  # not visible in the book but this generates Table 7.5         
 #' kable(bootCI,digits=c(4,4,4,4,4,4))     
 #'  
 #' # R-chunk 28  Page 286
@@ -3298,4 +3387,18 @@ NULL
 #'     return predce;     
 #'  }')     
 #' }
-NULL
+chapter7 <- function(verbose=TRUE) {
+  if (verbose) {
+    cat("Chapter 7: Static Models \n\n")
+    cat("Contains 67 code chunks, which this function includes in its help page. \n")
+    cat("To access these examples, type ?chapter7 into the console \n")
+    cat("All the code chunks for the selected chapter will be listed. \n")
+    cat("To run each example chunk now entails selecting the lines of \n")
+    cat("interest, copying them (eg. <ctrl> c), and pasting the lines into the \n")
+    cat("console or an R script file. The idea is to save the user from having \n")
+    cat("to type all the code lines themselves. Doing this is sometimes easier \n")
+    cat("when the help is sent to a separate window, use the fourth icon at \n")
+    cat("the top of the help tab to open a new window containing the help page \n")
+  }
+} # end of chapter7
+

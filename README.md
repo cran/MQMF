@@ -3,9 +3,12 @@
 
 # MQMF
 
+<!-- badges: start -->
+<!-- badges: end -->
+
 An R package for the book *Using R for Modelling and Quantitative
-Methods in Fisheries* (2020). ISBN: 9780367469894 due to be made
-available/published in September 2020.
+Methods in Fisheries* (2021). ISBN: 9780367469894 due to be made
+available in September 2020 but formally published in 2021.
 
 Hardback and softback versions are available from *www.routledge.com*,
 but is also available for pre-order from Amazon (best to use one’s local
@@ -18,9 +21,8 @@ available on CRAN, but to install this development version from
 [GitHub](https://github.com/) you can use:
 
 ``` r
-if (!require(devtools)){install.packages("devtools")} 
-
-devtools::install_github("https://github.com/haddonm/MQMF")
+# install.packages("devtools") #  remove the first hash to install devtools
+devtools::install_github("https://github.com/haddonm/MQMF/")
 ```
 
 The development version differs from having more details put into the
@@ -32,11 +34,20 @@ There are currently no vignettes, although the example code-chunks from
 the book are all available as the help pages of functions chapter2,
 chapter3, …, and chapter7.
 
+I have now put together the full **GitBook** version so that anyone can
+read the material on-line at: <https://haddonm.github.io/URMQMF/>, where
+URMQMF is an abbreviation of *Using R for Modelling and Quantitative
+Methods in Fisheries*. The book itself has been published by Chapman &
+Hall/CRC in its
+[R-Series](https://www.routledge.com/Chapman--HallCRC-The-R-Series/book-series/CRCTHERSER),
+and is available from booksellers, including from
+[Routledge](https://www.routledge.com/Using-R-for-Modelling-and-Quantitative-Methods-in-Fisheries/Haddon/p/book/9780367469887).
+
 This new book is an evolution and adaptation of my book *Modelling and
 Quantitative Methods in Fisheries* (Haddon, 2011). It is designed to
 introduce materials needed to understand the use of R in fisheries and
 ecology. The book is not really for total beginners to R, and only a
-brief introduciton to a few less commonly used aspects of R is provided.
+brief introduction to a few less commonly used aspects of R is provided.
 In terms of fisheries and population ecology, because it covers a wide
 array of subjects, and hence is limited in the depth in which each can
 be treated, it should probably be considered an introductory text. Even
@@ -56,12 +67,12 @@ the field. Hopefully, this R package will assist with that objective.
 
 Malcolm Haddon
 
-Hobart, March 10, 2020
+Hobart, September 6, 2023
 
 ## 
 
 Haddon, M. (2011) *Modelling and Quantitative Methods in Fisheries*. 2nd
 Ed. CRC/Chapman & Hall. 449p.
 
-Haddon, M. (2020) *Using R for Modelling and Quantitative Methods in
-Fisheries*. CRC/Chapman & Hall. In Press
+Haddon, M. (2021) *Using R for Modelling and Quantitative Methods in
+Fisheries*. CRC/Chapman & Hall. 337p.
